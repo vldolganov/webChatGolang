@@ -3,8 +3,8 @@ package models
 import "time"
 
 type Messages struct {
-	UserID    uint      `json:"userId"`
+	FromUser  float64   `json:"from_user"`
+	ToUser    uint      `json:"to_user"`
 	Text      string    `json:"text"`
-	Visible   bool      `json:"visible"`
 	CreatedAt time.Time `json:"createdAt"`
 }

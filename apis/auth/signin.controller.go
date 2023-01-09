@@ -15,8 +15,6 @@ func SignIn(c *gin.Context) {
 	var payload RequestPayload
 	var db = database.Connection
 
-	//TODO validation fields
-
 	if err := c.BindJSON(&payload); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"err": "bad request",
