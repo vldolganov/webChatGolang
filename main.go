@@ -58,7 +58,6 @@ func main() {
 
 	r.GET("/socket.io/*any", gin.WrapH(server))
 	r.POST("/socket.io/*any", gin.WrapH(server))
-	//apis.WebSocket(server)
 	apis.InitRoutes(r)
 	database.InitConnection()
 	r.Run(":8000")

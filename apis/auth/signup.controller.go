@@ -32,8 +32,6 @@ func SignUp(c *gin.Context) {
 		userAvatarName = payload.Avatar.Filename
 	}
 
-	//TODO validation FIELDS!!!
-
 	hashPassword := utilities.HashPassword(payload.Password)
 
 	var user = models.Users{

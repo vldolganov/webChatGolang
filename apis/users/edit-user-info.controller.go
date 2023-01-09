@@ -15,7 +15,6 @@ func EditUserInfo(c *gin.Context) {
 	var db = database.Connection
 	var user models.Users
 	var userAvatarName string
-	//
 
 	getCookie, _ := c.Cookie("refresh_token")
 	refreshToken := []byte(getCookie)

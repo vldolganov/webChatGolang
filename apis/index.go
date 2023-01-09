@@ -31,7 +31,3 @@ func InitRoutes(app *gin.Engine) {
 		chat.POST("/", messages.SendMessage)
 	}
 }
-
-//func WebSocket(s *socketio.Server) {
-//	s.OnConnect("/cha)
-//}
