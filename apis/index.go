@@ -3,6 +3,7 @@ package apis
 import (
 	"github.com/gin-gonic/gin"
 	"webSocketChatGo/apis/auth"
+	"webSocketChatGo/apis/messages"
 
 	"webSocketChatGo/apis/users"
 )
@@ -23,4 +24,14 @@ func InitRoutes(app *gin.Engine) {
 		user.GET("/list", users.GetUserList)
 		user.PUT("/edit", users.EditUserInfo)
 	}
+
+	chat := app.Group("/chat")
+
+	{
+		chat.POST("/", messages.SendMessage)
+	}
 }
+
+//func WebSocket(s *socketio.Server) {
+//	s.OnConnect("/cha)
+//}
