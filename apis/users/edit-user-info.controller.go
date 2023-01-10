@@ -30,7 +30,6 @@ func EditUserInfo(c *gin.Context) {
 			userAvatarName = payload.Avatar.Filename
 		}
 	}
-	//
 	if err := c.ShouldBind(&payload); err != nil {
 		c.JSON(http.StatusBadRequest, "should bind")
 		return

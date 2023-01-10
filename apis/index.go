@@ -29,5 +29,6 @@ func InitRoutes(app *gin.Engine) {
 
 	{
 		chat.POST("/", messages.SendMessage)
+		chat.GET("/", messages.GetMessages)
 	}
 }
