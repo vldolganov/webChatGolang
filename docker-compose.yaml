@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  web_chat:
+    container_name: web_chat
+    volumes:
+      - ./.database/postgres/data:/var/lib/postgresql/data
+    ports:
+      - "8888:5432"
+    environment:
+      - POSTGRES_PASSWORD=dolganoffadmin
+      - POSTGRES_USER=dolganoffadmin
+      - POSTGRES_DB=web_chat
+    image: postgres
