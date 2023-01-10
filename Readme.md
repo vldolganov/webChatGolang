@@ -34,7 +34,7 @@ return only auth user info
 sendMessage | localhost:8000/chat/ | only for auth user | method:POST | accepts:from user id(from cookie) and toUserId(consumer user)
 | return JSON obj with msg id, owner id and consumer id
 
-sendMessage | localhost:8000/chat/ | only for auth user | method:GET | accepts:toUserId(consumer user)
+getMessages | localhost:8000/chat/ | only for auth user | method:GET | accepts:toUserId(consumer user)
 | return JSON obj with all msg id, owner id and consumer id in selected chat
 ```
 for start project type this command in terminal 
