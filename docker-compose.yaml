@@ -4,9 +4,9 @@ services:
   web_chat:
     container_name: web_chat
     volumes:
-      - ./chat-data:/data/web_chat
+      - ./.database/postgres/data:/var/lib/postgresql/data
     ports:
-      - "9000:9000"
+      - "8888:5432"
     environment:
       - POSTGRES_PASSWORD=dolganoffadmin
       - POSTGRES_USER=dolganoffadmin
